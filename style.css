@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+.container{
+    padding: 1em;
+}
+.header {
+    display: flex;
+    justify-content: center;
+}
+.card_container {
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    background-color: rgba(145, 101, 187, 0.521);
+    width: 15em;
+    border-radius: 5px;
+    padding-bottom: 1em;
+    overflow: hidden;
+}
+.card > * + *{
+    padding: .5em;
+
+}
+img {
+    width: 100%;
+    margin:0;
+}
