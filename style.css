@@ -21,7 +21,6 @@
   flex-wrap: wrap;
   gap: 2em;
 }
-
 .card {
   background-color: rgba(145, 101, 187, 0.521);
   width: 15em;
