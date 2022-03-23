@@ -1,7 +1,8 @@
+// const cardImage = document.querySelector(".image");
+// const cardName = document.querySelector(".name");
+// const cardSpecies = document.querySelector(".species");
+
 const card = document.querySelector(".card");
-const cardImage = document.querySelector(".image");
-const cardName = document.querySelector(".name");
-const cardSpecies = document.querySelector(".species");
 const cardCont = document.querySelector(".card_container");
 
 // third option
@@ -9,12 +10,22 @@ const cardCont = document.querySelector(".card_container");
 fetch("https://rickandmortyapi.com/api/character")
   .then((res) => res.json())
   .then((data) => rickAndMorty(data.results));
+
 //dom
 let rickAndMorty = (characters) => {
+  // In order to create multiple cards, the easest option is to build the html in Javascript
   characters.forEach((character) => {
-    cardImage.src = `${character.image}`;
-    cardName.textContent = `Name: ${character.name}`;
-    cardSpecies.textContent = `Species: ${character.species}`;
+    cardCont.innerHTML =
+      cardCont.innerHTML +
+      `
+    <div class='card'>
+    <img src=${character.image}> </img>
+    <p>Name: ${character.name} </p>
+    <p>Species: ${character.species} </p>
+    <p>Species: ${character.status} </p>
+
+    </div>
+    `;
   });
 };
 
