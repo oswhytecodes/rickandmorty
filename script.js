@@ -16,7 +16,7 @@ let rickAndMorty = (characters) => {
           <img src=${character.image}> </img>
           <p>Name: ${character.name} </p>
           <p>Species: ${character.species} </p>
-          <p>Species: ${character.status} </p>
+          <p>Status: ${character.status} </p>
           </div>
         `;
   });
